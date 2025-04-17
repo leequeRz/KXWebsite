@@ -198,7 +198,7 @@ $(document).ready(function () {
       skill3: "การสื่อสารอย่างมีประสิทธิภาพ",
       skill4: "การทำงานร่วมกับผู้อื่น",
       skill5: "ทักษะการใช้เทคโนโลยีอย่างมีประสิทธิภาพ",
-      video_text: "บรรยากาศที่ SMART Play",
+      video_text: "บรรยากาศที่ KX SMART Play",
       topic_strength: "จุดเด่นของ KX SMART Play",
       title_strength1:
         "✅ หลักสูตรที่ออกแบบโดยผู้เชี่ยวชาญ ปรับแต่งเพื่อการเรียนรู้ที่มีประสิทธิภาพ",
