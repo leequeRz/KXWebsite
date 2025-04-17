@@ -159,11 +159,12 @@ body {
 }
 
 .l_header-inner {
-  max-width: 85%;
+  max-width: 95%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
 }
 
 @media screen and (max-width: 1280px) {
@@ -232,6 +233,13 @@ body {
   font-weight: 400;
   font-size: 16px;
   transition: all 0.3s;
+}
+
+@media screen and (max-width: 1440px) and (max-height: 900px) {
+  /* ปรับขนาด font ของ nav เป็น 14px */
+  .l_header-nav_item a {
+    font-size: 13px;
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -1243,7 +1251,7 @@ body {
 }
 
 .top_strength {
-  text-align: center;
+  text-align: start;
   margin-bottom: 70px;
   padding-bottom: 20px;
 }
@@ -1272,8 +1280,14 @@ body {
 .top_strength-unit01 {
   margin-top: 20px;
   margin-bottom: 20px;
+  padding-left: 200px;
 }
 
+@media screen and (max-width: 1024px) {
+  .top_strength-unit01 {
+    padding-left: 50px;
+  }
+}
 .top_strength-unit01 p,
 .top_strength-unit02 p,
 .top_strength-unit03 p {
@@ -2936,256 +2950,4 @@ details[open] .icon::after {
 .image_course {
   border-radius: 40px;
   width: 100px;
-}
-
-/* Safari-specific styles */
-@media not all and (min-resolution: 0.001dpcm) {
-  @supports (-webkit-appearance: none) {
-    /* ปรับแต่งการแสดงผลสำหรับ Safari */
-
-    /* ปรับขนาดการ์ดรีวิว */
-    .testimonial-card {
-      line-height: 0;
-      max-width: 100%;
-      margin: 0 auto;
-    }
-
-    .testimonial-image {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    /* ปรับปุ่มควบคุมสไลด์ */
-    .testimonial-prev-btn,
-    .testimonial-next-btn {
-      -webkit-appearance: none;
-      appearance: none;
-      margin: 0 10px;
-    }
-
-    /* ปรับการแสดงผลของ language selector */
-    .language-selector {
-      -webkit-backdrop-filter: blur(5px);
-      backdrop-filter: blur(5px);
-    }
-
-    /* แก้ไขปัญหาการแสดงผลของ flexbox */
-    .mission-content-wrapper {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-flex-wrap: wrap;
-      flex-wrap: wrap;
-    }
-
-    /* แก้ไขปัญหาการแสดงผลของ border-radius */
-    .m_title::before,
-    .top_movie-wrapper::before,
-    .top_movie-wrapper::after {
-      -webkit-transform: translateZ(0);
-      transform: translateZ(0);
-    }
-
-    /* แก้ไขปัญหาการแสดงผลของ transition */
-    .testimonial-dot,
-    .testimonial-prev-btn,
-    .testimonial-next-btn,
-    .lang-btn {
-      -webkit-transition: all 0.3s ease;
-      transition: all 0.3s ease;
-    }
-
-    /* แก้ไขปัญหาการแสดงผลของ box-shadow */
-    .testimonial-card {
-      -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    }
-
-    /* แก้ไขปัญหาการแสดงผลของ transform */
-    .skills-image:hover {
-      -webkit-transform: scale(1.05);
-      transform: scale(1.05);
-    }
-
-    /* ปรับความสูงของ section ต่างๆ */
-    .top_access {
-      padding-bottom: 30px;
-    }
-
-    /* ปรับการแสดงผลของ testimonials container */
-    .testimonials-container {
-      max-width: 800px;
-    }
-
-    /* ปรับการแสดงผลของ testimonials slider */
-    .testimonials-slider {
-      -webkit-overflow-scrolling: touch;
-    }
-  }
-}
-
-/* Safari-specific fixes */
-@media not all and (min-resolution: 0.001dpcm) {
-  @supports (-webkit-appearance: none) {
-    /* ปรับแต่ง navbar สำหรับ Safari */
-    .l_header {
-      -webkit-backdrop-filter: blur(10px);
-      backdrop-filter: blur(10px);
-    }
-
-    .l_header-inner {
-      display: -webkit-flex;
-
-      -webkit-align-items: center;
-      align-items: center;
-      -webkit-justify-content: space-between;
-      justify-content: space-between;
-      height: auto;
-      padding: 10px 0;
-    }
-
-    .l_header-logo-wrapper {
-      -webkit-flex-shrink: 0;
-      flex-shrink: 0;
-    }
-
-    .l_header-nav_list {
-      display: -webkit-flex;
-      -webkit-align-items: center;
-      align-items: center;
-      -webkit-justify-content: space-between;
-      justify-content: space-between;
-      margin: 0;
-      padding: 0;
-    }
-
-    .l_header-nav_item {
-      margin: 0 10px;
-      padding: 5px 0;
-    }
-
-    .l_header-nav_item a {
-      display: block;
-      padding: 5px 0;
-    }
-
-    .l_header-sns_list {
-      display: -webkit-flex;
-      -webkit-align-items: center;
-      align-items: center;
-      gap: 15px;
-    }
-
-    /* ปรับแต่งปุ่มเปลี่ยนภาษา */
-    .language-selector {
-      display: -webkit-flex;
-      -webkit-align-items: center;
-      align-items: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-backdrop-filter: blur(5px);
-      backdrop-filter: blur(5px);
-    }
-
-    .lang-btn {
-      -webkit-appearance: none;
-      appearance: none;
-      -webkit-transition: all 0.3s ease;
-      transition: all 0.3s ease;
-    }
-
-    /* ปรับแต่ง hamburger menu */
-    .js-hamburger {
-      -webkit-appearance: none;
-      appearance: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    /* แก้ไขปัญหาการแสดงผลของ menu เมื่อกดเปิด hamburger */
-    .l_header-nav.active {
-      -webkit-transform: translateX(0);
-      transform: translateX(0);
-      -webkit-transition: all 0.5s ease;
-      transition: all 0.5s ease;
-      height: 100vh;
-      overflow-y: auto;
-      -webkit-overflow-scrolling: touch;
-    }
-
-    /* แก้ไขปัญหาการแสดงผลของ dropdown menu */
-    .l_header-nav_item-child {
-      -webkit-transform-origin: top;
-      transform-origin: top;
-      -webkit-transition: all 0.3s ease;
-      transition: all 0.3s ease;
-    }
-
-    /* แก้ไขปัญหาการแสดงผลของ fixed elements */
-    .language-selector.fixed {
-      position: -webkit-sticky;
-      position: sticky;
-    }
-
-    /* แก้ไขปัญหาการแสดงผลของ z-index */
-    .l_header {
-      z-index: 1002;
-    }
-
-    .language-selector {
-      z-index: 1001;
-    }
-
-    /* แก้ไขปัญหาการแสดงผลของ box-shadow */
-    .l_header {
-      -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    /* แก้ไขปัญหาการแสดงผลของ border-radius */
-    .lang-btn {
-      -webkit-border-radius: 20px;
-      border-radius: 20px;
-    }
-
-    /* แก้ไขปัญหาการแสดงผลของ transition */
-    .l_header-nav_item a {
-      -webkit-transition: color 0.3s ease;
-      transition: color 0.3s ease;
-    }
-  }
-}
-
-/* เพิ่ม media query สำหรับ Safari บนอุปกรณ์มือถือ */
-@media not all and (min-resolution: 0.001dpcm) and (max-width: 768px) {
-  @supports (-webkit-appearance: none) {
-    .l_header-inner {
-      padding-top: 0;
-      height: 70px;
-    }
-
-    .js-hamburger {
-      top: 15px;
-      right: 70px;
-      width: 40px;
-      height: 40px;
-      position: fixed;
-    }
-
-    .language-selector {
-      top: 15px;
-      right: 15px;
-      position: fixed;
-    }
-
-    .l_header-logo-wrapper {
-      max-width: 100px;
-      margin-left: 10px;
-    }
-
-    .l_header-nav.active {
-      padding-top: 70px;
-    }
-  }
 }
