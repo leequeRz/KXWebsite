@@ -1,7 +1,11 @@
 @charset "UTF-8";
 
+@font-face {
+  font-family: "FC-Home";
+  src: url(fonts/FC\ Home\ Regular\ ver\ 1.01.ttf);
+}
 body {
-  font-family: "Noto Sans JP";
+  font-family: "Fc-Home", sans-serif;
 }
 
 :root {
@@ -238,7 +242,7 @@ body {
 @media screen and (max-width: 1440px) and (max-height: 900px) {
   /* ปรับขนาด font ของ nav เป็น 14px */
   .l_header-nav_item a {
-    font-size: 13px;
+    font-size: 15px;
   }
 }
 
@@ -301,7 +305,7 @@ body {
   padding: 20px 0px;
   font-style: normal;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 20px;
   line-height: 40px;
   color: var(--whiteColor);
 }
@@ -870,7 +874,6 @@ body {
 
 .top_about-txt {
   margin-top: 122px;
-  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -1281,6 +1284,7 @@ body {
   margin-top: 20px;
   margin-bottom: 20px;
   padding-left: 200px;
+  font-size: 20px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -2006,7 +2010,6 @@ details[open].top_question-content {
 
 .top_question-content-title-inner::before {
   content: "Q";
-  font-family: "M PLUS 2", sans-serif;
   color: #ff963a;
   font-style: normal;
   font-weight: 700;
@@ -2852,7 +2855,7 @@ details[open] .icon::after {
 @media screen and (max-width: 1440px) and (max-height: 768px) {
   /* ปรับขนาด font ของ nav เป็น 14px */
   .l_header-nav_item a {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   /* ปรับ max-width ของ nav เป็น 95% */
