@@ -172,10 +172,10 @@ $(document).ready(function () {
   const translations = {
     th: {
       // Add Thai translations here
-      navAbout: "KX SMART Play คืออะไร",
+      navAbout: "KX SMART Play",
       navCourse: "แนะนำหลักสูตร",
       navAboutus: "เกี่ยวกับเรา",
-      navTestimonials: "รีวิวจากผู้ปกครองและนักเรียน",
+      navTestimonials: "รีวิวจากผู้ปกครอง",
       navContact: "ติดต่อเรา",
       quote:
         "ค้นหาตัวเอง ความชอบ ความถนัด พร้อมพัฒนาทักษะสำคัญที่ KX SMART Play",
