@@ -2743,7 +2743,9 @@ details[open] .icon::after {
 .testimonial-slide {
   flex: 0 0 100%;
   scroll-snap-align: start;
-  padding: 20px;
+  padding-top: 20px;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .testimonial-card {
@@ -2757,9 +2759,54 @@ details[open] .icon::after {
 .testimonial-image {
   width: 100%;
   max-width: 800px;
+  height: auto;
   height: 600px;
   display: block;
   margin: 0 auto;
+  object-fit: contain;
+}
+
+/* ปรับขนาดคอนเทนเนอร์ให้มีขนาดใหญ่ขึ้นบนหน้าจอมือถือ */
+@media screen and (max-width: 768px) {
+  .testimonials-container {
+    max-width: 90%; /* เพิ่มจาก 60% เป็น 90% */
+  }
+
+  .testimonial-slide {
+    padding: 15px;
+  }
+
+  .testimonial-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 350px; /* กำหนดความสูงขั้นต่ำเพื่อให้รูปภาพใหญ่พอบนมือถือ */
+  }
+
+  /* เพิ่มขนาดการ์ด */
+  .testimonial-card {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* เพิ่มการปรับแต่งเพิ่มเติมสำหรับหน้าจอขนาดเล็กมาก */
+@media screen and (max-width: 480px) {
+  .testimonials-container {
+    max-width: 95%;
+    margin: 20px auto;
+  }
+
+  .testimonial-slide {
+    padding: 10px;
+  }
+
+  .testimonial-image {
+    min-height: 280px; /* ลดความสูงขั้นต่ำเล็กน้อยสำหรับหน้าจอเล็กมาก */
+  }
+
+  .testimonial-controls {
+    margin-top: 10px;
+  }
 }
 
 .testimonial-controls {
